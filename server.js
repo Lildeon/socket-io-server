@@ -9,6 +9,7 @@ const server = createServer(app);
 const io = new Server(server);
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+console.log(__dirname);
 
 app.get("/", (req, res) => {
   res.sendFile(join(__dirname, "./public/index.html"));
